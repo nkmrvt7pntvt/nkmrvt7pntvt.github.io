@@ -1,0 +1,1643 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>飞魔幻小说大全_奇幻文学影像社区,读幻境万象</title>
+<meta name="description" content="飞魔幻小说大全官方网站，专注奇幻、仙侠、悬疑与东方神话题材的原创文学影像社区，汇聚创作者与精品内容，持续运营值得信赖。">
+<meta name="keywords" content="飞魔幻小说大全,奇幻小说,仙侠文学,原创内容,影像社区">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231c1526'/%3E%3Cpath d='M32 10l5 14 15 2-11 10 3 15-12-8-12 8 3-15-11-10 15-2z' fill='%23e9b949'/%3E%3C/svg%3E">
+<style>
+:root{
+  --fm-bg:#141019;
+  --fm-bg2:#1d1626;
+  --fm-panel:#241b31;
+  --fm-panel2:#2c2139;
+  --fm-line:#3b2e4e;
+  --fm-text:#efe9f7;
+  --fm-dim:#b6a9c9;
+  --fm-gold:#e9b949;
+  --fm-violet:#a678e8;
+  --fm-cyan:#5fd6d0;
+  --fm-rose:#e8638c;
+  --fm-radius:16px;
+  --fm-maxw:1180px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:150px}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,sans-serif;
+  background:var(--fm-bg);
+  color:var(--fm-text);
+  line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+img,svg{display:block;max-width:100%}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+ul{list-style:none}
+
+/* ====== 吸顶区：公告条 + 页头 ====== */
+.fm-sticky{position:sticky;top:0;z-index:90}
+.fm-notice{
+  background:linear-gradient(90deg,#5b2f8e,#8e3f8f 45%,#c2623f);
+  font-size:13px;letter-spacing:.2px;
+}
+.fm-notice-in{
+  max-width:var(--fm-maxw);margin:0 auto;padding:7px 20px;
+  display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+  color:#fff8ee;
+}
+.fm-notice-tag{
+  flex:0 0 auto;background:rgba(0,0,0,.28);border-radius:999px;
+  padding:1px 10px;font-size:11.5px;font-weight:700;letter-spacing:1px;
+}
+.fm-notice-list{display:flex;gap:22px;flex-wrap:wrap;overflow:hidden}
+.fm-notice-list li{white-space:nowrap;opacity:.96}
+.fm-notice-dot{display:inline-block;width:5px;height:5px;border-radius:50%;background:#ffe27a;margin-right:7px;vertical-align:2px}
+
+.fm-header{
+  background:rgba(20,16,25,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--fm-line);
+}
+.fm-header-in{
+  max-width:var(--fm-maxw);margin:0 auto;padding:12px 20px;
+  display:flex;align-items:center;gap:20px;
+}
+.fm-logo{display:flex;align-items:center;gap:11px;flex:0 0 auto}
+.fm-logo-mark{
+  width:40px;height:40px;border-radius:12px;flex:0 0 auto;
+  background:radial-gradient(circle at 30% 25%,#8e62d6,#2a1c3f 70%);
+  display:grid;place-items:center;
+  box-shadow:0 0 0 1px #4b3a63 inset,0 6px 16px rgba(0,0,0,.4);
+}
+.fm-logo-mark svg{width:22px;height:22px}
+.fm-logo-txt strong{display:block;font-size:17px;letter-spacing:.5px;line-height:1.3}
+.fm-logo-txt span{display:block;font-size:10.5px;color:var(--fm-dim);letter-spacing:2.4px}
+.fm-nav{display:flex;gap:4px;flex:1 1 auto;flex-wrap:wrap}
+.fm-nav a{
+  padding:7px 12px;border-radius:9px;font-size:14.5px;color:var(--fm-dim);
+  transition:.22s;white-space:nowrap;
+}
+.fm-nav a:hover,.fm-nav a:focus-visible{color:#fff;background:var(--fm-panel2)}
+.fm-head-actions{display:flex;align-items:center;gap:10px;flex:0 0 auto}
+.fm-search{position:relative;display:flex;align-items:center}
+.fm-search input{
+  width:186px;padding:8px 34px 8px 13px;border-radius:10px;
+  background:var(--fm-panel);border:1px solid var(--fm-line);
+  color:var(--fm-text);font-size:13.5px;outline:none;transition:.22s;
+}
+.fm-search input:focus{border-color:var(--fm-violet);width:220px;background:var(--fm-bg2)}
+.fm-search button{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  width:28px;height:28px;border-radius:8px;display:grid;place-items:center;color:var(--fm-gold);
+}
+.fm-search button:hover{background:var(--fm-panel2)}
+.fm-btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:7px;
+  padding:9px 18px;border-radius:11px;font-size:14px;font-weight:600;
+  transition:.22s;border:1px solid transparent;
+}
+.fm-btn-primary{background:linear-gradient(135deg,var(--fm-gold),#d98b2b);color:#241a0d;box-shadow:0 6px 18px rgba(233,185,73,.22)}
+.fm-btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(233,185,73,.3)}
+.fm-btn-ghost{border-color:var(--fm-line);color:var(--fm-text);background:rgba(255,255,255,.03)}
+.fm-btn-ghost:hover{border-color:var(--fm-violet);background:rgba(166,120,232,.12)}
+.fm-btn-mini{padding:6px 13px;font-size:13px;border-radius:9px}
+.fm-nav-toggle{display:none;width:40px;height:40px;border-radius:10px;border:1px solid var(--fm-line);background:var(--fm-panel);place-items:center}
+.fm-nav-toggle span{display:block;width:18px;height:2px;background:var(--fm-text);position:relative}
+.fm-nav-toggle span::before,.fm-nav-toggle span::after{content:"";position:absolute;left:0;width:18px;height:2px;background:var(--fm-text)}
+.fm-nav-toggle span::before{top:-6px}
+.fm-nav-toggle span::after{top:6px}
+
+/* ====== 通用容器 ====== */
+.fm-wrap{max-width:var(--fm-maxw);margin:0 auto;padding:0 20px}
+.fm-section{padding:64px 0}
+.fm-section-alt{background:var(--fm-bg2)}
+.fm-sec-head{margin-bottom:34px;max-width:760px}
+.fm-kicker{
+  display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2.6px;
+  color:var(--fm-gold);text-transform:uppercase;margin-bottom:12px;
+}
+.fm-kicker::before{content:"";width:22px;height:1px;background:var(--fm-gold)}
+.fm-sec-head h2{font-size:clamp(23px,3.2vw,31px);letter-spacing:.5px;line-height:1.35}
+.fm-sec-head p{color:var(--fm-dim);font-size:14.5px;margin-top:10px}
+.fm-more{
+  display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--fm-cyan);
+  margin-top:14px;transition:.2s;
+}
+.fm-more:hover{gap:11px;color:#8ee9e4}
+
+/* ====== 首屏 ====== */
+.fm-hero{
+  position:relative;overflow:hidden;
+  background:
+    radial-gradient(760px 420px at 82% -6%,rgba(166,120,232,.28),transparent 62%),
+    radial-gradient(680px 400px at 6% 22%,rgba(95,214,208,.16),transparent 60%),
+    linear-gradient(180deg,#191221,#141019 70%);
+  border-bottom:1px solid var(--fm-line);
+}
+.fm-hero::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);
+  background-size:26px 26px;opacity:.5;
+}
+.fm-hero-in{
+  position:relative;z-index:2;max-width:var(--fm-maxw);margin:0 auto;padding:62px 20px 70px;
+  display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;
+}
+.fm-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;padding:5px 13px;border-radius:999px;
+  border:1px solid rgba(233,185,73,.4);background:rgba(233,185,73,.09);
+  font-size:12.5px;color:#f3d386;letter-spacing:1px;margin-bottom:20px;
+}
+.fm-hero h1{
+  font-size:clamp(34px,5.4vw,54px);line-height:1.16;letter-spacing:1px;
+  background:linear-gradient(100deg,#fff 20%,#f0cf8a 60%,#b58de8 96%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.fm-hero-sub{
+  font-size:clamp(16px,2vw,19px);color:#ddcff0;margin-top:16px;letter-spacing:.6px;
+}
+.fm-hero-lead{
+  color:var(--fm-dim);font-size:14.5px;margin-top:18px;max-width:560px;text-align:justify;
+}
+.fm-hero-lead strong{color:#f0d9a4;font-weight:600}
+.fm-hero-cta{display:flex;gap:13px;flex-wrap:wrap;margin-top:28px}
+.fm-hero-stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:36px;
+  border-top:1px solid var(--fm-line);padding-top:22px;max-width:520px;
+}
+.fm-hero-stats b{display:block;font-size:24px;color:#fff;letter-spacing:.5px;font-variant-numeric:tabular-nums}
+.fm-hero-stats b em{font-style:normal;font-size:13px;color:var(--fm-gold);margin-left:3px}
+.fm-hero-stats span{display:block;font-size:12.5px;color:var(--fm-dim);margin-top:2px}
+
+/* 首屏主视觉（自绘 SVG 场景） */
+.fm-hero-art{position:relative}
+.fm-hero-art svg{width:100%;height:auto;border-radius:22px;border:1px solid #453459;box-shadow:0 26px 60px rgba(0,0,0,.55)}
+.fm-hero-art-cap{
+  position:absolute;left:16px;bottom:16px;right:16px;
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:10px 14px;border-radius:12px;background:rgba(15,11,20,.78);
+  border:1px solid rgba(255,255,255,.09);font-size:12.5px;color:#e6dbf5;backdrop-filter:blur(6px);
+}
+.fm-hero-art-cap .fm-live{display:inline-flex;align-items:center;gap:6px;color:var(--fm-cyan)}
+.fm-live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--fm-cyan);box-shadow:0 0 0 4px rgba(95,214,208,.18)}
+
+/* ====== 关键词介绍长文 ====== */
+.fm-intro-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:34px}
+.fm-intro-grid article{
+  background:linear-gradient(180deg,var(--fm-panel),#1f1729);
+  border:1px solid var(--fm-line);border-radius:var(--fm-radius);padding:26px 26px 22px;
+}
+.fm-intro-grid h3{font-size:17px;margin-bottom:12px;color:#f3e6ff;display:flex;align-items:center;gap:9px}
+.fm-intro-grid h3 i{
+  width:6px;height:20px;border-radius:3px;background:linear-gradient(180deg,var(--fm-gold),var(--fm-violet));display:inline-block;
+}
+.fm-intro-grid p{font-size:14px;color:#c7bad8;text-align:justify;margin-bottom:11px}
+.fm-intro-grid p:last-child{margin-bottom:0}
+.fm-intro-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.fm-chip{
+  font-size:12.5px;padding:5px 12px;border-radius:999px;
+  background:rgba(166,120,232,.13);border:1px solid rgba(166,120,232,.3);color:#d6c2f5;
+}
+
+/* ====== 焦点视频 ====== */
+.fm-focus-grid{display:grid;grid-template-columns:1.35fr 1fr;gap:22px}
+.fm-vcard{
+  position:relative;border-radius:var(--fm-radius);overflow:hidden;
+  background:var(--fm-panel);border:1px solid var(--fm-line);
+  transition:transform .28s,border-color .28s,box-shadow .28s;
+  display:flex;flex-direction:column;
+}
+.fm-vcard:hover{transform:translateY(-4px);border-color:#5c477a;box-shadow:0 18px 38px rgba(0,0,0,.45)}
+.fm-vthumb{position:relative;aspect-ratio:16/9;background:#0f0b15;overflow:hidden}
+.fm-vthumb svg{width:100%;height:100%}
+.fm-play{
+  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+}
+.fm-play i{
+  width:52px;height:52px;border-radius:50%;display:grid;place-items:center;
+  background:rgba(14,10,20,.6);border:1.5px solid rgba(255,255,255,.55);
+  color:#fff;font-size:0;transition:.28s;backdrop-filter:blur(3px);
+}
+.fm-play i::after{
+  content:"";display:block;width:0;height:0;margin-left:4px;
+  border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;
+}
+.fm-vcard:hover .fm-play i{background:rgba(233,185,73,.92);border-color:#fff;transform:scale(1.08)}
+.fm-vthumb .fm-vtag{
+  position:absolute;left:12px;top:12px;font-size:11.5px;padding:3px 10px;border-radius:999px;
+  background:rgba(20,14,28,.78);border:1px solid rgba(255,255,255,.16);color:#f3e7c9;letter-spacing:.5px;
+}
+.fm-vthumb .fm-vdur{
+  position:absolute;right:12px;bottom:12px;font-size:11.5px;padding:2px 8px;border-radius:6px;
+  background:rgba(0,0,0,.66);color:#e8e2f2;font-variant-numeric:tabular-nums;
+}
+.fm-vbody{padding:14px 16px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.fm-vbody h3{font-size:15.5px;line-height:1.45}
+.fm-vcard-lg .fm-vbody h3{font-size:20px}
+.fm-vbody p{font-size:13px;color:var(--fm-dim);line-height:1.65}
+.fm-vmeta{
+  margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:10px;
+  padding-top:10px;border-top:1px dashed var(--fm-line);font-size:12.5px;color:#9d90b2;
+}
+.fm-author{display:inline-flex;align-items:center;gap:7px}
+.fm-avatar{
+  width:24px;height:24px;border-radius:50%;flex:0 0 auto;display:grid;place-items:center;
+  font-size:11.5px;font-weight:700;color:#16101f;
+}
+.fm-vops{display:flex;gap:4px}
+.fm-op{
+  display:inline-flex;align-items:center;gap:4px;padding:4px 8px;border-radius:8px;
+  font-size:12px;color:#a99bbd;transition:.2s;
+}
+.fm-op:hover{background:var(--fm-panel2);color:#fff}
+.fm-op.is-liked{color:var(--fm-rose)}
+.fm-op.is-saved{color:var(--fm-gold)}
+.fm-op .fm-ico{font-size:13px;line-height:1}
+
+.fm-focus-side{display:grid;grid-template-columns:1fr;gap:18px}
+.fm-vcard-sm{flex-direction:row}
+.fm-vcard-sm .fm-vthumb{width:40%;flex:0 0 40%;aspect-ratio:16/10}
+.fm-vcard-sm .fm-play i{width:36px;height:36px}
+.fm-vcard-sm .fm-play i::after{border-left-width:11px;border-top-width:6px;border-bottom-width:6px}
+.fm-vcard-sm .fm-vbody{padding:12px 14px}
+.fm-vcard-sm .fm-vbody h3{font-size:14px}
+
+/* ====== 视频流网格 ====== */
+.fm-stream{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.fm-stream .fm-vthumb{aspect-ratio:16/9}
+
+/* ====== 专题 ====== */
+.fm-topics{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fm-topic{
+  position:relative;border-radius:var(--fm-radius);overflow:hidden;min-height:250px;
+  display:flex;flex-direction:column;justify-content:flex-end;padding:20px;
+  border:1px solid var(--fm-line);transition:transform .3s;
+}
+.fm-topic:hover{transform:translateY(-5px)}
+.fm-topic::before{content:"";position:absolute;inset:0;z-index:0}
+.fm-topic-1::before{background:linear-gradient(180deg,rgba(24,16,34,.15),rgba(19,13,27,.96)),radial-gradient(420px 240px at 80% 0%,#7a3fa8,#1a1226)}
+.fm-topic-2::before{background:linear-gradient(180deg,rgba(18,20,26,.1),rgba(15,18,24,.96)),radial-gradient(420px 240px at 20% 0%,#2f7f86,#131a24)}
+.fm-topic-3::before{background:linear-gradient(180deg,rgba(30,18,18,.1),rgba(24,15,18,.96)),radial-gradient(420px 240px at 70% 10%,#a8592f,#1e1218)}
+.fm-topic::after{
+  content:"";position:absolute;left:0;right:0;top:0;height:2px;z-index:2;
+  background:linear-gradient(90deg,var(--fm-gold),var(--fm-violet));
+}
+.fm-topic>*{position:relative;z-index:1}
+.fm-topic-no{font-size:11.5px;letter-spacing:2px;color:var(--fm-gold);margin-bottom:8px}
+.fm-topic h3{font-size:18px;margin-bottom:7px}
+.fm-topic p{font-size:13px;color:#c3b6d4;margin-bottom:14px}
+.fm-topic-st{display:flex;align-items:center;gap:8px;font-size:12px;color:#a99bbd}
+.fm-topic-st b{
+  font-weight:600;color:#ffd98a;background:rgba(233,185,73,.14);
+  border:1px solid rgba(233,185,73,.28);border-radius:999px;padding:2px 10px;
+}
+
+/* ====== 创作者 ====== */
+.fm-creators{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.fm-cre-card{
+  background:linear-gradient(180deg,var(--fm-panel),#1e1628);
+  border:1px solid var(--fm-line);border-radius:var(--fm-radius);padding:22px 18px;
+  text-align:center;transition:.28s;cursor:pointer;
+}
+.fm-cre-card:hover{border-color:var(--fm-violet);transform:translateY(-4px)}
+.fm-cre-ava{
+  width:66px;height:66px;border-radius:50%;margin:0 auto 13px;display:grid;place-items:center;
+  font-size:23px;font-weight:800;color:#171021;
+}
+.fm-cre-card h3{font-size:15.5px}
+.fm-cre-field{font-size:12px;color:var(--fm-gold);margin-top:3px;letter-spacing:.6px}
+.fm-cre-card p{font-size:12.5px;color:var(--fm-dim);margin-top:10px;min-height:58px;text-align:left}
+.fm-cre-meta{display:flex;justify-content:center;gap:16px;margin-top:12px;font-size:12px;color:#a295b7}
+.fm-cre-meta b{display:block;color:#f0e6ff;font-size:14px}
+
+/* ====== 榜单 ====== */
+.fm-rank-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.fm-rank{
+  background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:var(--fm-radius);
+  padding:20px 20px 14px;
+}
+.fm-rank h3{font-size:15px;display:flex;align-items:center;gap:8px;margin-bottom:12px;color:#efdcff}
+.fm-rank h3 i{width:22px;height:22px;border-radius:7px;display:grid;place-items:center;font-size:11px;color:#1a1226;font-style:normal;font-weight:800}
+.fm-rank-1 h3 i{background:linear-gradient(135deg,#ffd98a,#e9b949)}
+.fm-rank-2 h3 i{background:linear-gradient(135deg,#9fe3de,#5fd6d0)}
+.fm-rank-3 h3 i{background:linear-gradient(135deg,#efb3c8,#e8638c)}
+.fm-rank ol{display:flex;flex-direction:column;gap:10px}
+.fm-rank li{display:flex;align-items:center;gap:10px;font-size:13px;padding-bottom:10px;border-bottom:1px dashed rgba(255,255,255,.07)}
+.fm-rank li:last-child{border-bottom:none;padding-bottom:0}
+.fm-rank-no{
+  width:19px;height:19px;flex:0 0 auto;border-radius:6px;display:grid;place-items:center;
+  font-size:11px;color:#a99bbd;background:var(--fm-panel2);font-variant-numeric:tabular-nums;
+}
+.fm-rank li:nth-child(1) .fm-rank-no{background:#e9b949;color:#241a0d;font-weight:800}
+.fm-rank li:nth-child(2) .fm-rank-no{background:#c9c3d8;color:#241a0d;font-weight:800}
+.fm-rank li:nth-child(3) .fm-rank-no{background:#c98a4f;color:#241a0d;font-weight:800}
+.fm-rank-name{flex:1 1 auto;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.fm-rank-val{font-size:12px;color:#8f82a5;flex:0 0 auto;font-variant-numeric:tabular-nums}
+
+/* ====== 随笔 ====== */
+.fm-essays{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.fm-essay{
+  border-left:2px solid var(--fm-violet);padding:4px 0 4px 20px;
+}
+.fm-essay h3{font-size:16px;margin-bottom:8px;color:#f2e7ff}
+.fm-essay p{font-size:13.5px;color:#bfb1d2;text-align:justify}
+.fm-essay .fm-essay-by{font-size:12px;color:#8f82a5;margin-top:10px}
+
+/* ====== 投稿 / 互动 ====== */
+.fm-join{
+  background:
+    radial-gradient(600px 300px at 12% 0%,rgba(166,120,232,.24),transparent 60%),
+    radial-gradient(520px 300px at 92% 100%,rgba(233,185,73,.16),transparent 60%),
+    linear-gradient(180deg,#1c1526,#171020);
+  border:1px solid var(--fm-line);border-radius:22px;padding:38px 34px;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:34px;align-items:center;
+}
+.fm-join h2{font-size:clamp(21px,2.8vw,27px);line-height:1.4;margin-bottom:12px}
+.fm-join p{font-size:14px;color:#c3b6d4;text-align:justify}
+.fm-join-form{display:flex;flex-direction:column;gap:11px}
+.fm-join-form label{font-size:12.5px;color:#a99bbd}
+.fm-join-form input,.fm-join-form select{
+  width:100%;padding:11px 13px;border-radius:11px;background:rgba(13,9,19,.7);
+  border:1px solid var(--fm-line);color:var(--fm-text);font-size:13.5px;outline:none;transition:.2s;
+}
+.fm-join-form input:focus,.fm-join-form select:focus{border-color:var(--fm-violet)}
+.fm-join-form .fm-btn{margin-top:4px}
+.fm-form-tip{font-size:12.5px;color:var(--fm-cyan);min-height:18px}
+
+/* ====== 评论 ====== */
+.fm-reviews{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.fm-review{
+  background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:14px;padding:18px;
+  display:flex;flex-direction:column;gap:10px;
+}
+.fm-review p{font-size:13px;color:#c9bddb;line-height:1.7}
+.fm-review-foot{display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:10px;border-top:1px dashed var(--fm-line)}
+.fm-review-foot span{font-size:12px;color:#8f82a5}
+.fm-review-foot b{font-size:12.5px;color:#e6d9f6;font-weight:600}
+
+/* ====== 动态 ====== */
+.fm-news{display:flex;flex-direction:column;gap:0}
+.fm-news-item{
+  display:grid;grid-template-columns:104px 1fr auto;gap:18px;align-items:center;
+  padding:18px 4px;border-bottom:1px solid var(--fm-line);
+}
+.fm-news-item:first-child{border-top:1px solid var(--fm-line)}
+.fm-news-date{font-size:12.5px;color:var(--fm-gold);font-variant-numeric:tabular-nums;letter-spacing:.5px}
+.fm-news-item h3{font-size:15px;margin-bottom:4px}
+.fm-news-item p{font-size:12.5px;color:#a99bbd}
+.fm-news-tag{
+  font-size:11.5px;padding:3px 10px;border-radius:999px;flex:0 0 auto;
+  background:rgba(95,214,208,.12);border:1px solid rgba(95,214,208,.3);color:#9fe3de;
+}
+
+/* ====== FAQ ====== */
+.fm-faq{display:flex;flex-direction:column;gap:11px;max-width:900px}
+.fm-faq details{
+  background:var(--fm-panel);border:1px solid var(--fm-line);border-radius:12px;
+  padding:0 18px;transition:.2s;
+}
+.fm-faq details[open]{border-color:#5a4677;background:var(--fm-panel2)}
+.fm-faq summary{
+  list-style:none;cursor:pointer;padding:15px 0;font-size:14.5px;font-weight:600;
+  display:flex;justify-content:space-between;align-items:center;gap:14px;
+}
+.fm-faq summary::-webkit-details-marker{display:none}
+.fm-faq summary::after{content:"+";color:var(--fm-gold);font-size:18px;font-weight:400;transition:.2s}
+.fm-faq details[open] summary::after{transform:rotate(45deg)}
+.fm-faq p{font-size:13.5px;color:#bfb1d2;padding:0 0 16px;text-align:justify}
+
+/* ====== 页脚 ====== */
+.fm-footer{background:#100c16;border-top:1px solid var(--fm-line);padding:52px 0 26px}
+.fm-footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:32px}
+.fm-footer h3{font-size:14px;margin-bottom:14px;color:#f0e6ff;letter-spacing:.6px}
+.fm-footer p,.fm-footer li{font-size:13px;color:#9d90b2;line-height:1.9}
+.fm-footer li a:hover{color:var(--fm-gold)}
+.fm-footer-brand p{margin-top:12px;text-align:justify}
+.fm-footer-bottom{
+  margin-top:36px;padding-top:20px;border-top:1px solid var(--fm-line);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;
+  font-size:12.5px;color:#7f738f;
+}
+.fm-footer-bottom a{color:#a99bbd}
+.fm-footer-bottom a:hover{color:var(--fm-gold)}
+
+/* ====== Toast / 弹窗 ====== */
+.fm-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:#2b2039;border:1px solid #5a4677;color:#f3e9ff;
+  padding:11px 20px;border-radius:12px;font-size:13.5px;z-index:200;
+  opacity:0;pointer-events:none;transition:.3s;box-shadow:0 14px 34px rgba(0,0,0,.5);
+}
+.fm-toast.is-on{opacity:1;transform:translate(-50%,0)}
+.fm-modal{
+  position:fixed;inset:0;z-index:180;display:none;place-items:center;padding:20px;
+  background:rgba(8,5,12,.78);backdrop-filter:blur(4px);
+}
+.fm-modal.is-open{display:grid}
+.fm-modal-box{
+  width:100%;max-width:460px;background:var(--fm-panel);border:1px solid #52406e;
+  border-radius:18px;padding:24px;box-shadow:0 30px 70px rgba(0,0,0,.6);
+}
+.fm-modal-box h3{font-size:18px;margin-bottom:8px}
+.fm-modal-box p{font-size:13.5px;color:#b6a9c9;margin-bottom:16px}
+.fm-modal-box textarea{
+  width:100%;min-height:96px;resize:vertical;padding:11px 13px;border-radius:11px;
+  background:rgba(13,9,19,.7);border:1px solid var(--fm-line);color:var(--fm-text);
+  font-family:inherit;font-size:13.5px;outline:none;
+}
+.fm-modal-box textarea:focus{border-color:var(--fm-violet)}
+.fm-modal-ops{display:flex;justify-content:flex-end;gap:10px;margin-top:16px}
+
+/* 回到顶部 */
+.fm-top{
+  position:fixed;right:22px;bottom:24px;width:46px;height:46px;border-radius:14px;z-index:120;
+  background:var(--fm-panel2);border:1px solid var(--fm-line);display:grid;place-items:center;
+  color:var(--fm-gold);opacity:0;pointer-events:none;transition:.28s;font-size:17px;
+}
+.fm-top.is-on{opacity:1;pointer-events:auto}
+.fm-top:hover{background:#3a2c4f}
+
+/* 搜索反馈 */
+.fm-search-hint{
+  position:absolute;left:0;right:0;top:calc(100% + 8px);
+  background:#271e35;border:1px solid #52406e;border-radius:12px;padding:10px;
+  font-size:12.5px;color:#c9bddb;display:none;z-index:110;
+  box-shadow:0 16px 34px rgba(0,0,0,.5);
+}
+.fm-search-hint.is-on{display:block}
+.fm-search-hint b{color:var(--fm-gold)}
+.fm-search-hint ul{margin-top:6px;display:flex;flex-direction:column;gap:4px}
+.fm-search-hint li{padding:4px 6px;border-radius:7px;cursor:pointer}
+.fm-search-hint li:hover{background:rgba(255,255,255,.06);color:#fff}
+
+/* 响应式 */
+@media (max-width:1024px){
+  .fm-hero-in{grid-template-columns:1fr;gap:36px;padding:46px 20px 56px}
+  .fm-focus-grid{grid-template-columns:1fr}
+  .fm-intro-grid{grid-template-columns:1fr}
+  .fm-stream{grid-template-columns:repeat(2,1fr)}
+  .fm-creators{grid-template-columns:repeat(2,1fr)}
+  .fm-rank-grid{grid-template-columns:1fr}
+  .fm-topics{grid-template-columns:1fr}
+  .fm-join{grid-template-columns:1fr}
+  .fm-reviews{grid-template-columns:repeat(2,1fr)}
+  .fm-footer-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:760px){
+  .fm-nav-toggle{display:grid}
+  .fm-nav{
+    display:none;position:absolute;left:0;right:0;top:100%;
+    background:#1a1322;border-bottom:1px solid var(--fm-line);
+    padding:12px 20px 18px;flex-direction:column;gap:2px;
+  }
+  .fm-nav.is-open{display:flex}
+  .fm-nav a{padding:10px 12px}
+  .fm-header-in{position:relative;flex-wrap:wrap}
+  .fm-search input{width:130px}
+  .fm-search input:focus{width:150px}
+  .fm-head-actions .fm-btn-primary{display:none}
+  .fm-stream{grid-template-columns:1fr}
+  .fm-creators{grid-template-columns:1fr}
+  .fm-essays{grid-template-columns:1fr}
+  .fm-reviews{grid-template-columns:1fr}
+  .fm-news-item{grid-template-columns:1fr;gap:6px}
+  .fm-footer-grid{grid-template-columns:1fr}
+  .fm-join{padding:26px 20px}
+  .fm-hero-stats{grid-template-columns:repeat(3,1fr);gap:8px}
+  .fm-notice-list{gap:0}
+  .fm-notice-list li:nth-child(n+2){display:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<!-- 吸顶区：公告条 + 页头 -->
+<div class="fm-sticky">
+  <div class="fm-notice">
+    <div class="fm-notice-in">
+      <span class="fm-notice-tag">官方发布</span>
+      <ul class="fm-notice-list">
+        <li><span class="fm-notice-dot"></span>《雾隐山海志》第三卷章节更新，新增 12 个原创幻境条目</li>
+        <li><span class="fm-notice-dot"></span>冬季「幻境短篇创作赛」开启报名，征稿至 12 月 20 日</li>
+        <li><span class="fm-notice-dot"></span>创作者访谈第 18 期上线，谈谈世界观构建的方法</li>
+      </ul>
+    </div>
+  </div>
+
+  <header class="fm-header">
+    <div class="fm-header-in">
+      <a class="fm-logo" href="#top" aria-label="飞魔幻小说大全官方网站首页">
+        <span class="fm-logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5l2.3 6.2 6.2 2.3-6.2 2.3L12 19.5l-2.3-6.2L3.5 11l6.2-2.3z" fill="#e9b949"/><circle cx="18.5" cy="5" r="1.6" fill="#a678e8"/></svg>
+        </span>
+        <span class="fm-logo-txt">
+          <strong>飞魔幻小说大全</strong>
+          <span>FMH FANTASY</span>
+        </span>
+      </a>
+      <nav class="fm-nav" id="fmNav" aria-label="主导航">
+        <a href="#top">首页</a>
+        <a href="#focus">焦点内容</a>
+        <a href="#stream">幻境影像</a>
+        <a href="#topics">专题企划</a>
+        <a href="#creators">创作者</a>
+        <a href="#rank">榜单</a>
+        <a href="#news">品牌动态</a>
+        <a href="#faq">帮助中心</a>
+      </nav>
+      <div class="fm-head-actions">
+        <div class="fm-search">
+          <input type="search" id="fmSearchInput" placeholder="搜索书名 / 题材 / 作者" aria-label="站内搜索">
+          <button type="button" id="fmSearchBtn" aria-label="搜索">⌕</button>
+          <div class="fm-search-hint" id="fmSearchHint"></div>
+        </div>
+        <a class="fm-btn fm-btn-primary fm-btn-mini" href="#join">作者报名</a>
+        <button class="fm-nav-toggle" id="fmNavToggle" aria-label="展开导航菜单" aria-expanded="false" aria-controls="fmNav"><span></span></button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+
+  <!-- 首屏 -->
+  <section class="fm-hero" aria-labelledby="fmHeroTitle">
+    <div class="fm-hero-in">
+      <div class="fm-hero-copy">
+        <span class="fm-hero-badge">官方网站 · 持续运营 · 原创正版</span>
+        <h1 id="fmHeroTitle">飞魔幻小说大全</h1>
+        <p class="fm-hero-sub">把幻境读成影像，让每一个世界观都有回响</p>
+        <p class="fm-hero-lead">
+          作为深耕奇幻文学领域的<strong>官方网站</strong>，飞魔幻小说大全由企业团队持续运营，聚合仙侠、悬疑、东方神话、都市异闻等多元题材的原创精品内容。我们以影像化叙事连接读者与创作者，为品牌与用户搭建值得信赖的内容生态：这里既能读到完整的幻境设定、篇章连载与深度解析，也能看到作家访谈、幕后手记与读者共创的短影像。
+        </p>
+        <div class="fm-hero-cta">
+          <a class="fm-btn fm-btn-primary" href="#focus">进入焦点内容</a>
+          <a class="fm-btn fm-btn-ghost" href="#join">提交你的作品</a>
+        </div>
+        <div class="fm-hero-stats">
+          <div><b data-count="1280">0</b><span>原创长篇连载</span></div>
+          <div><b data-count="9600">0</b><span>短篇与幻境条目</span></div>
+          <div><b data-count="380">0</b><span>签约创作者（位）</span></div>
+        </div>
+      </div>
+
+      <div class="fm-hero-art">
+        <svg viewBox="0 0 640 460" role="img" aria-label="飞魔幻小说大全主视觉：紫金色夜空下的浮空书阁与流光卷轴">
+          <defs>
+            <linearGradient id="fmSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#2b1b46"/>
+              <stop offset="0.55" stop-color="#1a1228"/>
+              <stop offset="1" stop-color="#120d1b"/>
+            </linearGradient>
+            <radialGradient id="fmMoon" cx="0.5" cy="0.5" r="0.5">
+              <stop offset="0" stop-color="#ffe6a8"/>
+              <stop offset="0.6" stop-color="#e9b949"/>
+              <stop offset="1" stop-color="#8c6520" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="fmScroll" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f2d79a"/>
+              <stop offset="1" stop-color="#b9782f"/>
+            </linearGradient>
+            <linearGradient id="fmMount" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#4a3468"/>
+              <stop offset="1" stop-color="#1b1329"/>
+            </linearGradient>
+            <linearGradient id="fmMount2" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#33244a"/>
+              <stop offset="1" stop-color="#161020"/>
+            </linearGradient>
+          </defs>
+          <rect width="640" height="460" fill="url(#fmSky)"/>
+          <!-- 星点 -->
+          <g fill="#efe4ff" opacity="0.85">
+            <circle cx="60" cy="58" r="1.7"/><circle cx="132" cy="34" r="1.2"/>
+            <circle cx="212" cy="82" r="1.5"/><circle cx="296" cy="46" r="1.1"/>
+            <circle cx="372" cy="96" r="1.6"/><circle cx="470" cy="40" r="1.3"/>
+            <circle cx="548" cy="88" r="1.8"/><circle cx="596" cy="150" r="1.2"/>
+            <circle cx="96" cy="164" r="1.4"/><circle cx="250" cy="140" r="1"/>
+          </g>
+          <!-- 月轮 -->
+          <circle cx="500" cy="112" r="78" fill="url(#fmMoon)" opacity="0.9"/>
+          <circle cx="500" cy="112" r="40" fill="#f6d68c" opacity="0.95"/>
+          <circle cx="486" cy="102" r="9" fill="#e0b663" opacity="0.6"/>
+          <circle cx="512" cy="124" r="6" fill="#e0b663" opacity="0.5"/>
+          <!-- 远山 -->
+          <path d="M0 322 L92 236 L168 300 L246 212 L330 306 L410 248 L500 318 L580 262 L640 320 L640 460 L0 460 Z" fill="url(#fmMount2)" opacity="0.85"/>
+          <path d="M0 366 L84 302 L162 360 L252 288 L338 358 L428 304 L516 366 L600 318 L640 358 L640 460 L0 460 Z" fill="url(#fmMount)"/>
+          <!-- 浮空书阁 -->
+          <g transform="translate(140 178)">
+            <path d="M0 96 L118 40 L236 96 L118 152 Z" fill="#2e2045" stroke="#6b4f96" stroke-width="2"/>
+            <path d="M14 100 L118 52 L222 100 L118 148 Z" fill="#1d142c"/>
+            <rect x="26" y="66" width="184" height="34" rx="4" fill="#3a2a55" stroke="#6b4f96" stroke-width="1.5"/>
+            <g fill="#e9b949" opacity="0.9">
+              <rect x="40" y="76" width="12" height="16" rx="2"/>
+              <rect x="58" y="76" width="12" height="16" rx="2" fill="#a678e8"/>
+              <rect x="76" y="76" width="12" height="16" rx="2" fill="#5fd6d0"/>
+              <rect x="94" y="76" width="12" height="16" rx="2"/>
+              <rect x="112" y="76" width="12" height="16" rx="2" fill="#e8638c"/>
+              <rect x="130" y="76" width="12" height="16" rx="2"/>
+              <rect x="148" y="76" width="12" height="16" rx="2" fill="#a678e8"/>
+              <rect x="166" y="76" width="12" height="16" rx="2"/>
+              <rect x="184" y="76" width="12" height="16" rx="2" fill="#5fd6d0"/>
+            </g>
+            <path d="M118 40 L118 0" stroke="#8b6ab5" stroke-width="2"/>
+            <circle cx="118" cy="-6" r="7" fill="#e9b949"/>
+          </g>
+          <!-- 流光卷轴 -->
+          <g transform="translate(372 246) rotate(-8)">
+            <rect x="0" y="0" width="188" height="66" rx="10" fill="url(#fmScroll)" opacity="0.94"/>
+            <rect x="12" y="14" width="118" height="5" rx="2.5" fill="#6b4a20" opacity="0.6"/>
+            <rect x="12" y="28" width="150" height="5" rx="2.5" fill="#6b4a20" opacity="0.45"/>
+            <rect x="12" y="42" width="96" height="5" rx="2.5" fill="#6b4a20" opacity="0.5"/>
+            <circle cx="176" cy="33" r="10" fill="none" stroke="#7a5326" stroke-width="2" opacity="0.6"/>
+          </g>
+          <!-- 流光粒子 -->
+          <g fill="#5fd6d0" opacity="0.8">
+            <circle cx="330" cy="196" r="2.6"/><circle cx="356" cy="168" r="2"/>
+            <circle cx="392" cy="210" r="3"/><circle cx="430" cy="172" r="2.2"/>
+            <circle cx="466" cy="214" r="2.6"/><circle cx="510" cy="184" r="1.9"/>
+          </g>
+          <g fill="#e8638c" opacity="0.75">
+            <circle cx="286" cy="228" r="2.2"/><circle cx="308" cy="252" r="1.8"/>
+            <circle cx="252" cy="264" r="2.4"/>
+          </g>
+        </svg>
+        <div class="fm-hero-art-cap">
+          <span class="fm-live">幻境直播中：世界观构建夜谈</span>
+          <span>2.4 万人在场</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 关键词深度解析 -->
+  <section class="fm-section" id="about" aria-labelledby="fmAboutTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">About The Brand</span>
+        <h2 id="fmAboutTitle">关于飞魔幻小说大全：一个把文字变成画面的品牌官网</h2>
+        <p>从品牌定位、内容生态到创作者的日常，我们如何理解奇幻文学这件事。</p>
+      </div>
+
+      <div class="fm-intro-grid">
+        <article>
+          <h3><i></i>品牌定位与关键词解析</h3>
+          <p>“飞魔幻”三个字，指向的是一种轻逸的想象力：飞行、魔性、幻想。而“小说大全”承载的是规模与完整度——我们希望它不是一个零散的书单，而是一套可以被检索、被讨论、被反复回看的幻境档案。作为飞魔幻小说大全的官方网站，我们把这件事拆成三层：第一层是文本层，收录完整的长篇连载、短篇合集与世界设定集；第二层是影像层，把关键章节转译成 3 到 15 分钟的短片、预告与设定动画；第三层是社区层，让读者、作者、画师与剪辑者在一个场域里互相看见。</p>
+          <p>因此，在这个品牌官网里，“小说大全”不只是数量指标，更是内容生态的组织方式。每一个题材都对应一条独立的内容线，仙侠看重修行逻辑与门派体系，悬疑看重线索铺陈与反转节奏，东方神话看重谱系考据与器物细节，都市异闻则更强调现实感与情绪落点。</p>
+        </article>
+
+        <article>
+          <h3><i></i>企业背景与持续运营</h3>
+          <p>平台的运营团队由内容编辑、影视改编策划与技术研发三部分组成，自成立以来坚持原创正版与作者权益优先的原则。我们为签约创作者提供从大纲评估、编辑陪跑、视觉设定到短片拍摄的完整链路支持，也为读者提供高清的阅读与影像体验。企业内部的评审会每周召开一次，讨论的不是流量数字，而是“这个故事是否值得被讲下去”。</p>
+          <p>我们相信，一个值得信赖的奇幻平台不该只有爆款，还需要有耐心。于是有了长期更新的世界设定库、有了每月一期的创作者访谈、有了面向新人的短篇挑战赛。持续运营意味着我们愿意陪一个作者从三千字的试笔，走到三十万字的完整长篇；也愿意陪一个读者从随手点开，走到自己拿起笔。</p>
+        </article>
+
+        <article>
+          <h3><i></i>内容生态与品质标准</h3>
+          <p>在内容品质上，我们设置了四道关：设定一致性、语言完成度、情绪浓度与影像潜力。设定一致性确保世界观不自我矛盾；语言完成度关注句子的呼吸感；情绪浓度决定读者是否愿意在某个段落停留；影像潜力则判断这个场景是否具备被拍成短片的可能。四道关不追求满分，但要求作者至少在其中两项上具备明确优势。</p>
+          <p>同时，平台鼓励多元与包容的表达：女性视角的仙侠、以民间传说为底的城市写作、带方言质感的乡土奇幻，都在我们的推荐位中出现过。行业领先不意味着单一标准，而是有能力容纳更多声音。</p>
+        </article>
+
+        <article>
+          <h3><i></i>用户至上与社区温度</h3>
+          <p>用户至上是这个品牌最朴素的准则。我们尽量让每一次点击都有反馈：收藏会同步、评论会回应、投稿会在七个工作日内得到编辑的具体意见。社区里有很多自发的行为——有人为冷门作品写长评，有人把喜欢的段落做成手绘分镜，有人在讨论区连载自己的世界观笔记。这些真实的、温暖的动作，构成了平台最有力量的部分。</p>
+          <p>接下来的一年，我们会继续做三件事：完善幻境设定百科、扩大原创短影像的扶持规模、把线下读者见面会带到更多城市。我们期待与你在这个幻境里相遇，也期待你留下的每一个故事。</p>
+        </article>
+      </div>
+
+      <div class="fm-intro-tags">
+        <span class="fm-chip">东方神话</span>
+        <span class="fm-chip">仙侠修真</span>
+        <span class="fm-chip">悬疑异闻</span>
+        <span class="fm-chip">都市幻想</span>
+        <span class="fm-chip">世界设定集</span>
+        <span class="fm-chip">影像改编</span>
+        <span class="fm-chip">创作者扶持</span>
+        <span class="fm-chip">读者共创</span>
+        <span class="fm-chip">品牌故事</span>
+        <span class="fm-chip">原创正版</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 焦点内容 -->
+  <section class="fm-section fm-section-alt" id="focus" aria-labelledby="fmFocusTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Editor's Focus</span>
+        <h2 id="fmFocusTitle">焦点内容：本周被反复回看的五个幻境</h2>
+        <p>编辑部从更新量与读者停留时长中挑出的重点作品，含长篇连载与设定短片。</p>
+      </div>
+
+      <div class="fm-focus-grid">
+        <article class="fm-vcard fm-vcard-lg">
+          <div class="fm-vthumb">
+            <svg viewBox="0 0 640 360" role="img" aria-label="雾隐山海志第三卷封面：云海之上的青铜巨门">
+              <defs>
+                <linearGradient id="f1a" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0" stop-color="#3b2a5c"/><stop offset="1" stop-color="#171022"/>
+                </linearGradient>
+                <linearGradient id="f1b" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#d8b06a"/><stop offset="1" stop-color="#7a5a2c"/>
+                </linearGradient>
+              </defs>
+              <rect width="640" height="360" fill="url(#f1a)"/>
+              <circle cx="120" cy="88" r="46" fill="#f2d79a" opacity="0.28"/>
+              <g fill="#efe4ff" opacity="0.8">
+                <circle cx="330" cy="52" r="1.6"/><circle cx="420" cy="40" r="1.2"/><circle cx="540" cy="70" r="1.8"/><circle cx="250" cy="86" r="1.2"/>
+              </g>
+              <path d="M0 268 Q120 216 240 262 T480 250 T640 276 L640 360 L0 360 Z" fill="#241839" opacity="0.9"/>
+              <path d="M0 306 Q140 268 280 302 T640 300 L640 360 L0 360 Z" fill="#1a1228"/>
+              <g transform="translate(318 130)">
+                <rect x="0" y="0" width="140" height="150" rx="6" fill="url(#f1b)" opacity="0.9"/>
+                <rect x="14" y="14" width="112" height="122" rx="3" fill="#241a38"/>
+                <path d="M70 20 L70 130" stroke="#8f6f3a" stroke-width="3"/>
+                <circle cx="70" cy="75" r="17" fill="none" stroke="#e9b949" stroke-width="2.5"/>
+                <circle cx="70" cy="75" r="6" fill="#e9b949"/>
+              </g>
+              <g fill="#5fd6d0" opacity="0.7">
+                <circle cx="480" cy="180" r="2.4"/><circle cx="512" cy="204" r="1.8"/><circle cx="196" cy="200" r="2.2"/>
+              </g>
+              <rect width="640" height="360" fill="url(#f1a)" opacity="0" />
+            </svg>
+            <span class="fm-vtag">长篇连载 · 东方神话</span>
+            <span class="fm-vdur">阅读 32 分钟</span>
+            <div class="fm-play"><i></i></div>
+          </div>
+          <div class="fm-vbody">
+            <h3>雾隐山海志（第三卷）：青铜门开之前，守山人要先忘记自己的名字</h3>
+            <p>本卷把主线从雾隐洲推向更北的荒海，作者用大量器物细节铺陈一个正在失效的神话秩序。开头三章几乎是静默的，却让故事的重量慢慢压下来——这大概是今年最值得慢读的奇幻文本之一。</p>
+            <div class="fm-vmeta">
+              <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#e9b949,#d98b2b)">沉</span>沉舟客</span>
+              <span class="fm-vops">
+                <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">1284</span></button>
+                <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+                <button class="fm-op" data-share><span class="fm-ico">⤴</span>分享</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <div class="fm-focus-side">
+          <article class="fm-vcard fm-vcard-sm">
+            <div class="fm-vthumb">
+              <svg viewBox="0 0 320 200" role="img" aria-label="夜航九歌短片封面：江面灯笼与孤舟">
+                <rect width="320" height="200" fill="#121a2a"/>
+                <circle cx="248" cy="52" r="26" fill="#f2d79a" opacity="0.35"/>
+                <path d="M0 150 Q80 128 160 148 T320 142 L320 200 L0 200 Z" fill="#1d2c42"/>
+                <path d="M0 172 Q90 156 180 170 T320 166 L320 200 L0 200 Z" fill="#101827"/>
+                <g transform="translate(118 116)">
+                  <path d="M0 32 Q34 46 68 32 L58 40 Q34 50 10 40 Z" fill="#c98a4f"/>
+                  <path d="M30 32 L30 8 L46 26 Z" fill="#e9b949" opacity="0.9"/>
+                </g>
+                <circle cx="52" cy="126" r="4" fill="#e8638c" opacity="0.9"/>
+                <circle cx="78" cy="112" r="3" fill="#e9b949" opacity="0.8"/>
+                <circle cx="262" cy="132" r="3.4" fill="#5fd6d0" opacity="0.8"/>
+              </svg>
+              <span class="fm-vtag">设定短片</span>
+              <span class="fm-vdur">08:24</span>
+              <div class="fm-play"><i></i></div>
+            </div>
+            <div class="fm-vbody">
+              <h3>夜航九歌：一支桨划过三重梦境</h3>
+              <p>用三分钟一镜到底的水面镜头，交代主角回不去的故乡。</p>
+              <div class="fm-vmeta">
+                <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#5fd6d0,#2f7f86)">江</span>江上白</span>
+                <span class="fm-vops">
+                  <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">642</span></button>
+                  <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article class="fm-vcard fm-vcard-sm">
+            <div class="fm-vthumb">
+              <svg viewBox="0 0 320 200" role="img" aria-label="纸上妖魔录访谈封面：摊开的书页与墨色纹样">
+                <rect width="320" height="200" fill="#1d1620"/>
+                <path d="M60 44 L160 60 L160 168 L60 152 Z" fill="#efe4d2" opacity="0.92"/>
+                <path d="M160 60 L262 44 L262 152 L160 168 Z" fill="#e3d5bf" opacity="0.9"/>
+                <g stroke="#4a3a2a" stroke-width="2" opacity="0.6">
+                  <path d="M76 74 L144 84"/><path d="M76 92 L144 102"/><path d="M76 110 L132 118"/>
+                  <path d="M176 84 L244 74"/><path d="M176 102 L244 92"/><path d="M176 120 L232 112"/>
+                </g>
+                <path d="M120 148 Q140 118 160 148 Q180 118 200 148" fill="none" stroke="#a8592f" stroke-width="2.4"/>
+                <circle cx="160" cy="130" r="5" fill="#a8592f"/>
+              </svg>
+              <span class="fm-vtag">人物访谈</span>
+              <span class="fm-vdur">15:02</span>
+              <div class="fm-play"><i></i></div>
+            </div>
+            <div class="fm-vbody">
+              <h3>纸上妖魔录：一位插画师如何为幻想立传</h3>
+              <p>从速写到成稿，她把三百个妖怪的谱系画成了一张可以查询的地图。</p>
+              <div class="fm-vmeta">
+                <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#c9a0f0,#7a4fb0)">砚</span>砚青</span>
+                <span class="fm-vops">
+                  <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">918</span></button>
+                  <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article class="fm-vcard fm-vcard-sm">
+            <div class="fm-vthumb">
+              <svg viewBox="0 0 320 200" role="img" aria-label="长夜书院读稿会封面：暖灯下的长桌与书堆">
+                <rect width="320" height="200" fill="#241a1e"/>
+                <circle cx="160" cy="34" r="46" fill="#e9b949" opacity="0.16"/>
+                <path d="M120 24 L120 76" stroke="#6b4a2a" stroke-width="2"/>
+                <circle cx="120" cy="90" r="15" fill="#f2d79a" opacity="0.9"/>
+                <rect x="46" y="132" width="228" height="12" rx="4" fill="#4a3324"/>
+                <g fill="#c98a4f">
+                  <rect x="66" y="106" width="34" height="26" rx="2"/>
+                  <rect x="106" y="100" width="30" height="32" rx="2" fill="#a8592f"/>
+                  <rect x="142" y="110" width="36" height="22" rx="2" fill="#8f6f3a"/>
+                  <rect x="196" y="104" width="30" height="28" rx="2"/>
+                </g>
+                <circle cx="252" cy="120" r="9" fill="#e8638c" opacity="0.7"/>
+              </svg>
+              <span class="fm-vtag">创作幕后</span>
+              <span class="fm-vdur">11:47</span>
+              <div class="fm-play"><i></i></div>
+            </div>
+            <div class="fm-vbody">
+              <h3>长夜书院读稿会：我们如何讨论一个故事的失败</h3>
+              <p>编辑与作者围坐一桌，把一份八万字初稿拆到只剩三个主干场景。</p>
+              <div class="fm-vmeta">
+                <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#f0b47a,#c2623f)">长</span>长夜书院</span>
+                <span class="fm-vops">
+                  <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">476</span></button>
+                  <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+                </span>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 幻境影像流 -->
+  <section class="fm-section" id="stream" aria-labelledby="fmStreamTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Fantasy Stream</span>
+        <h2 id="fmStreamTitle">幻境影像：把书页里的场景拍成六段光</h2>
+        <p>涵盖知识科普、深度测评、城市探索与治愈影像，点击标签可快速筛选。</p>
+        <div class="fm-intro-tags" style="margin-top:16px">
+          <button class="fm-chip" data-filter="all" style="cursor:pointer">全部</button>
+          <button class="fm-chip" data-filter="东方" style="cursor:pointer">东方神话</button>
+          <button class="fm-chip" data-filter="悬疑" style="cursor:pointer">悬疑异闻</button>
+          <button class="fm-chip" data-filter="知识" style="cursor:pointer">知识科普</button>
+          <button class="fm-chip" data-filter="城市" style="cursor:pointer">城市探索</button>
+        </div>
+      </div>
+
+      <div class="fm-stream" id="fmStreamGrid">
+        <article class="fm-vcard" data-cat="知识">
+          <div class="fm-vthumb">
+            <svg viewBox="0 0 360 202" role="img" aria-label="世界观搭建指南封面：漂浮的几何星环">
+              <rect width="360" height="202" fill="#151a2b"/>
+              <g stroke="#5fd6d0" fill="none" opacity="0.65">
+                <ellipse cx="180" cy="101" rx="118" ry="42" transform="rotate(-16 180 101)"/>
+                <ellipse cx="180" cy="101" rx="86" ry="30" transform="rotate(22 180 101)"/>
+              </g>
+              <circle cx="180" cy="101" r="30" fill="#a678e8" opacity="0.65"/>
+              <circle cx="180" cy="101" r="13" fill="#e9b949"/>
+              <g fill="#efe4ff"><circle cx="72" cy="42" r="1.8"/><circle cx="296" cy="56" r="2"/><circle cx="316" cy="152" r="1.4"/></g>
+            </svg>
+            <span class="fm-vtag">知识科普</span>
+            <span class="fm-vdur">12:08</span>
+            <div class="fm-play"><i></i></div>
+          </div>
+          <div class="fm-vbody">
+            <h3>世界观搭建指南：从一条河流开始的三步法</h3>
+            <p>不先写地图，先写水从哪里来。一个可复用的设定方法。</p>
+            <div class="fm-vmeta">
+              <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#9fe3de,#2f7f86)">编</span>设定编辑部</span>
+              <span class="fm-vops">
+                <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">2036</span></button>
+                <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-vcard" data-cat="东方">
+          <div class="fm-vthumb">
+            <svg viewBox="0 0 360 202" role="img" aria-label="山海绘卷配色考封面：青绿色的群山与朱砂点">
+              <rect width="360" height="202" fill="#14261f"/>
+              <path d="M0 148 L70 82 L128 138 L196 66 L262 134 L320 92 L360 140 L360 202 L0 202 Z" fill="#1f4436"/>
+              <path d="M0 170 L84 124 L156 168 L236 118 L310 166 L360 146 L360 202 L0 202 Z" fill="#0f1d18"/>
+              <circle cx="300" cy="44" r="20" fill="#e9b949" opacity="0.55"/>
+              <circle cx="86" cy="52" r="5" fill="#e8638c" opacity="0.9"/>
+              <path d="M40 176 Q90 158 140 176" stroke="#5fd6d0" stroke-width="2" fill="none" opacity="0.6"/>
+            </svg>
+            <span class="fm-vtag">东方神话</span>
+            <span class="fm-vdur">10:35</span>
+            <div class="fm-play"><i></i></div>
+          </div>
+          <div class="fm-vbody">
+            <h3>山海绘卷配色考：矿物颜料的十二种用法</h3>
+            <p>从石青到朱砂，讲解古法配色在神话插画中的转译。</p>
+            <div class="fm-vmeta">
+              <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#e9b949,#a8592f)">砚</span>砚青</span>
+              <span class="fm-vops">
+                <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">1542</span></button>
+                <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-vcard" data-cat="悬疑">
+          <div class="fm-vthumb">
+            <svg viewBox="0 0 360 202" role="img" aria-label="旧城灯影下悬疑篇封面：雨巷与昏黄路灯">
+              <rect width="360" height="202" fill="#141821"/>
+              <rect x="0" y="0" width="360" height="202" fill="url(#fmGrad1)" />
+              <defs><linearGradient id="fmGrad1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1c2333"/><stop offset="1" stop-color="#0d1017"/></linearGradient></defs>
+              <path d="M40 0 L40 202 M320 0 L320 202" stroke="#2a3446" stroke-width="8"/>
+              <circle cx="180" cy="86" r="30" fill="#e9b949" opacity="0.28"/>
+              <circle cx="180" cy="86" r="7" fill="#f2d79a"/>
+              <path d="M180 86 L180 202" stroke="#f2d79a" stroke-width="1.6" opacity="0.35"/>
+              <g stroke="#5fd6d0" stroke-width="1.4" opacity="0.6">
+                <path d="M96 20 L92 78"/><path d="M118 34 L114 96"/><path d="M250 26 L246 84"/><path d="M272 40 L268 100"/>
+              </g>
+              <ellipse cx="180" cy="186" rx="70" ry="10" fill="#5fd6d0" opacity="0.12"/>
+            </svg>
+            <span class="fm-vtag">悬疑异闻</span>
+            <span class="fm-vdur">09:16</span>
+            <div class="fm-play"><i></i></div>
+          </div>
+          <div class="fm-vbody">
+            <h3>旧城灯影：一条巷子里的六起失踪案</h3>
+            <p>用地图回放的方式，复盘一部悬疑长篇的线索结构。</p>
+            <div class="fm-vmeta">
+              <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#e8638c,#8e3f8f)">灯</span>灯下客</span>
+              <span class="fm-vops">
+                <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">1187</span></button>
+                <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-vcard" data-cat="城市">
+          <div class="fm-vthumb">
+            <svg viewBox="0 0 360 202" role="img" aria-label="幻境取景地城市探索封面：现代天际线与古塔叠影">
+              <rect width="360" height="202" fill="#1a1626"/>
+              <g fill="#2b2440">
+                <rect x="18" y="110" width="40" height="92"/><rect x="66" y="86" width="34" height="116"/>
+                <rect x="108" y="128" width="30" height="74"/><rect x="248" y="98" width="40" height="104"/>
+                <rect x="296" y="126" width="48" height="76"/>
+              </g>
+              <path d="M168 202 L168 122 Q180 92 192 122 L192 202 Z" fill="#7a5a2c"/>
+              <path d="M180 92 L180 76" stroke="#e9b949" stroke-width="3"/>
+              <circle cx="180" cy="70" r="6" fill="#e9b949"/>
+              <circle cx="120" cy="46" r="18" fill="#a678e8" opacity="0.4"/>
+              <g fill="#5fd6d0" opacity="0.7"><circle cx="228" cy="60" r="2"/><circle cx="256" cy="76" r="1.6"/><circle cx="92" cy="56" r="1.8"/></g>
+            </svg>
+            <span class="fm-vtag">城市探索</span>
+            <span class="fm-vdur">14:22</span>
+            <div class="fm-play"><i></i></div>
+          </div>
+          <div class="fm-vbody">
+            <h3>幻境取景地：在旧城里寻找现代神话的入口</h3>
+            <p>从一座塔、一口井、一条老街开始，讲述在地文化与想象力的关系。</p>
+            <div class="fm-vmeta">
+              <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#c9a0f0,#5b3a8f)">行</span>行走档案</span>
+              <span class="fm-vops">
+                <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">863</span></button>
+                <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-vcard" data-cat="知识">
+          <div class="fm-vthumb">
+            <svg viewBox="0 0 360 202" role="img" aria-label="长篇节奏测评封面：起伏的波形与节拍点">
+              <rect width="360" height="202" fill="#171320"/>
+              <path d="M0 132 L40 100 L76 148 L112 72 L148 128 L184 58 L220 140 L256 96 L292 136 L328 108 L360 132 L360 202 L0 202 Z" fill="#2c2040"/>
+              <path d="M0 132 L40 100 L76 148 L112 72 L148 128 L184 58 L220 140 L256 96 L292 136 L328 108 L360 132" stroke="#e9b949" stroke-width="2" fill="none"/>
+              <g fill="#e8638c"><circle cx="112" cy="72" r="4"/><circle cx="184" cy="58" r="4"/><circle cx="220" cy="140" r="4"/></g>
+              <line x1="0" y1="168" x2="360" y2="168" stroke="#5fd6d0" stroke-width="1" opacity="0.4" stroke-dasharray="6 6"/>
+            </svg>
+            <span class="fm-vtag">深度测评</span>
+            <span class="fm-vdur">16:44</span>
+            <div class="fm-play"><i></i></div>
+          </div>
+          <div class="fm-vbody">
+            <h3>长篇节奏测评：十部作品的开篇前五章拆解</h3>
+            <p>用波形图对比悬念密度，看好的开局如何在前两千字抓住人。</p>
+            <div class="fm-vmeta">
+              <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#ffd98a,#c2623f)">评</span>评审室</span>
+              <span class="fm-vops">
+                <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">732</span></button>
+                <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+              </span>
+            </div>
+          </div>
+        </article>
+
+        <article class="fm-vcard" data-cat="东方">
+          <div class="fm-vthumb">
+            <svg viewBox="0 0 360 202" role="img" aria-label="治愈影像守灯人封面：深夜灯塔与暖光海面">
+              <rect width="360" height="202" fill="#101821"/>
+              <path d="M0 150 Q90 132 180 148 T360 144 L360 202 L0 202 Z" fill="#182634"/>
+              <g transform="translate(254 68)">
+                <rect x="0" y="34" width="26" height="66" fill="#c9c3d8" opacity="0.85"/>
+                <rect x="-8" y="24" width="42" height="12" rx="3" fill="#e9b949"/>
+                <circle cx="13" cy="18" r="12" fill="#f2d79a"/>
+              </g>
+              <path d="M266 92 L120 156 M266 92 L300 160" stroke="#f2d79a" stroke-width="16" opacity="0.12"/>
+              <circle cx="90" cy="70" r="16" fill="#a678e8" opacity="0.4"/>
+              <g fill="#efe4ff" opacity="0.8"><circle cx="46" cy="42" r="1.6"/><circle cx="150" cy="34" r="1.4"/><circle cx="206" cy="54" r="1.8"/></g>
+            </svg>
+            <span class="fm-vtag">治愈影像</span>
+            <span class="fm-vdur">07:52</span>
+            <div class="fm-play"><i></i></div>
+          </div>
+          <div class="fm-vbody">
+            <h3>守灯人：在一个只亮一夜的世界里</h3>
+            <p>温柔到几乎安静的一段影像，关于陪伴与等待。</p>
+            <div class="fm-vmeta">
+              <span class="fm-author"><span class="fm-avatar" style="background:linear-gradient(135deg,#9fe3de,#7a4fb0)">守</span>守灯人</span>
+              <span class="fm-vops">
+                <button class="fm-op" data-like><span class="fm-ico">♡</span><span class="fm-like-num">1476</span></button>
+                <button class="fm-op" data-save><span class="fm-ico">☆</span>收藏</button>
+              </span>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 专题企划 -->
+  <section class="fm-section fm-section-alt" id="topics" aria-labelledby="fmTopicsTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Special Projects</span>
+        <h2 id="fmTopicsTitle">专题企划：三条正在生长的内容线</h2>
+        <p>每个企划都由编辑、签约作者与读者共同推进，持续更新。</p>
+      </div>
+      <div class="fm-topics">
+        <article class="fm-topic fm-topic-1">
+          <span class="fm-topic-no">PROJECT 01</span>
+          <h3>东方神话谱系重建</h3>
+          <p>以器物、山川、神职为线索，重新梳理散落在民间叙事里的神话碎片，形成可检索的设定百科。</p>
+          <div class="fm-topic-st"><b>更新中</b><span>已收录 216 条 · 联合 12 位作者</span></div>
+        </article>
+        <article class="fm-topic fm-topic-2">
+          <span class="fm-topic-no">PROJECT 02</span>
+          <h3>幻境短影像扶持计划</h3>
+          <p>为原创短篇提供拍摄基金与制作支持，把文本转成 5 到 15 分钟的影像作品，面向全网发布。</p>
+          <div class="fm-topic-st"><b>招募中</b><span>第三期报名开放 · 名额 30 组</span></div>
+        </article>
+        <article class="fm-topic fm-topic-3">
+          <span class="fm-topic-no">PROJECT 03</span>
+          <h3>长夜读稿会</h3>
+          <p>每月一次的线下与线上同步读稿，编辑逐页回应初稿问题，帮助新作者完成从想法到结构的落地。</p>
+          <div class="fm-topic-st"><b>报名中</b><span>11 月场次余 18 位 · 免费参与</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 创作者矩阵 -->
+  <section class="fm-section" id="creators" aria-labelledby="fmCreatorsTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Creators</span>
+        <h2 id="fmCreatorsTitle">创作者矩阵：四位把幻境写进日常的人</h2>
+        <p>点击卡片可查看作者简介与代表作品，欢迎关注与留言。</p>
+      </div>
+      <div class="fm-creators">
+        <article class="fm-cre-card" tabindex="0" data-author="沉舟客">
+          <div class="fm-cre-ava" style="background:linear-gradient(135deg,#ffd98a,#d98b2b)">沉</div>
+          <h3>沉舟客</h3>
+          <div class="fm-cre-field">东方神话 / 世界观构建</div>
+          <p>写海边长大的人，习惯把潮汐写进故事。代表作《雾隐山海志》，擅长用器物细节撑起庞大设定。</p>
+          <div class="fm-cre-meta">
+            <span><b>42</b>作品</span>
+            <span><b>18.6万</b>关注</span>
+          </div>
+        </article>
+        <article class="fm-cre-card" tabindex="0" data-author="砚青">
+          <div class="fm-cre-ava" style="background:linear-gradient(135deg,#c9a0f0,#7a4fb0)">砚</div>
+          <h3>砚青</h3>
+          <div class="fm-cre-field">插图 / 妖怪谱系</div>
+          <p>插画师与设定集作者，画了三百多个妖怪，也写它们的小传。相信视觉本身可以承担叙事。</p>
+          <div class="fm-cre-meta">
+            <span><b>117</b>作品</span>
+            <span><b>24.3万</b>关注</span>
+          </div>
+        </article>
+        <article class="fm-cre-card" tabindex="0" data-author="灯下客">
+          <div class="fm-cre-ava" style="background:linear-gradient(135deg,#e8638c,#8e3f8f)">灯</div>
+          <h3>灯下客</h3>
+          <div class="fm-cre-field">悬疑 / 都市异闻</div>
+          <p>前调查记者，现全职写作。把旧城巷子里的传闻写成结构严密的悬疑长篇，节奏极稳。</p>
+          <div class="fm-cre-meta">
+            <span><b>29</b>作品</span>
+            <span><b>12.8万</b>关注</span>
+          </div>
+        </article>
+        <article class="fm-cre-card" tabindex="0" data-author="江上白">
+          <div class="fm-cre-ava" style="background:linear-gradient(135deg,#9fe3de,#2f7f86)">江</div>
+          <h3>江上白</h3>
+          <div class="fm-cre-field">短片 / 氛围叙事</div>
+          <p>独立影像作者，喜欢用水面、雾与灯笼。作品多为 5 分钟以内的氛围短片，气质安静。</p>
+          <div class="fm-cre-meta">
+            <span><b>63</b>作品</span>
+            <span><b>9.7万</b>关注</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 榜单 + 随笔 -->
+  <section class="fm-section fm-section-alt" id="rank" aria-labelledby="fmRankTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Charts & Notes</span>
+        <h2 id="fmRankTitle">本周榜单与编辑随笔</h2>
+        <p>榜单由阅读完成度、收藏与读者投票综合计算，每周一更新。</p>
+      </div>
+
+      <div class="fm-rank-grid">
+        <div class="fm-rank fm-rank-1">
+          <h3><i>热</i>热度榜</h3>
+          <ol>
+            <li><span class="fm-rank-no">1</span><span class="fm-rank-name">雾隐山海志 · 第三卷</span><span class="fm-rank-val">98.2</span></li>
+            <li><span class="fm-rank-no">2</span><span class="fm-rank-name">夜航九歌</span><span class="fm-rank-val">95.7</span></li>
+            <li><span class="fm-rank-no">3</span><span class="fm-rank-name">旧城灯影</span><span class="fm-rank-val">93.1</span></li>
+            <li><span class="fm-rank-no">4</span><span class="fm-rank-name">青铜门下的守山人</span><span class="fm-rank-val">90.4</span></li>
+            <li><span class="fm-rank-no">5</span><span class="fm-rank-name">纸上妖魔录</span><span class="fm-rank-val">88.6</span></li>
+          </ol>
+        </div>
+        <div class="fm-rank fm-rank-2">
+          <h3><i>新</i>新人榜</h3>
+          <ol>
+            <li><span class="fm-rank-no">1</span><span class="fm-rank-name">第七个梦的租客</span><span class="fm-rank-val">+412</span></li>
+            <li><span class="fm-rank-no">2</span><span class="fm-rank-name">山鬼借路</span><span class="fm-rank-val">+368</span></li>
+            <li><span class="fm-rank-no">3</span><span class="fm-rank-name">盐与星图</span><span class="fm-rank-val">+301</span></li>
+            <li><span class="fm-rank-no">4</span><span class="fm-rank-name">北岸来信</span><span class="fm-rank-val">+274</span></li>
+            <li><span class="fm-rank-no">5</span><span class="fm-rank-name">打更人手册</span><span class="fm-rank-val">+198</span></li>
+          </ol>
+        </div>
+        <div class="fm-rank fm-rank-3">
+          <h3><i>口</i>口碑榜</h3>
+          <ol>
+            <li><span class="fm-rank-no">1</span><span class="fm-rank-name">长夜书院读稿笔记</span><span class="fm-rank-val">9.6</span></li>
+            <li><span class="fm-rank-no">2</span><span class="fm-rank-name">守灯人</span><span class="fm-rank-val">9.4</span></li>
+            <li><span class="fm-rank-no">3</span><span class="fm-rank-name">山海绘卷配色考</span><span class="fm-rank-val">9.2</span></li>
+            <li><span class="fm-rank-no">4</span><span class="fm-rank-name">世界观搭建指南</span><span class="fm-rank-val">9.1</span></li>
+            <li><span class="fm-rank-no">5</span><span class="fm-rank-name">幻境取景地</span><span class="fm-rank-val">8.9</span></li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="fm-essays" style="margin-top:38px">
+        <article class="fm-essay">
+          <h3>写一个会饿的主角</h3>
+          <p>很多奇幻故事的主角不需要吃饭，这很可惜。饥饿是最容易让读者共情的身体经验：他走了一整天的山路，包里只剩半块硬得像石头的饼；他知道再往前三里有一个村子，但他不确定那村子还在不在。这些细节不会让世界观更宏大，却会让它更可信。我常在读稿会上建议作者删掉一段设定说明，写一顿早饭。</p>
+          <div class="fm-essay-by">—— 编辑手记 · 长夜书院</div>
+        </article>
+        <article class="fm-essay">
+          <h3>关于“幻境”的两个误解</h3>
+          <p>第一个误解是幻境必须远离现实，第二个误解是幻境只需要奇观。事实上，越是奇特的世界，越需要一条结实的现实绳索。读者愿意相信山海之间的神祇，是因为他们先相信了那艘漏水的船、那盏没油的灯。我们所做的工作，基本上就是不断地在奇观与日常之间打结，确保读者不会掉下去，也确保他们没有安全到无聊。</p>
+          <div class="fm-essay-by">—— 品牌故事 · 内容编辑部</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 投稿 / 互动 -->
+  <section class="fm-section" id="join" aria-labelledby="fmJoinTitle">
+    <div class="fm-wrap">
+      <div class="fm-join">
+        <div>
+          <h2 id="fmJoinTitle">把你的幻境交给这里：作者报名与投稿入口</h2>
+          <p>我们长期征集原创奇幻、仙侠、悬疑与都市异闻作品。不限字数，长篇可分期提交，短篇欢迎直接投递。所有来稿由编辑在七个工作日内给出具体反馈，通过后进入签约与影像化评估流程。同时，我们也在寻找愿意一起做内容的朋友：插画、配乐、剪辑、配音，都欢迎报名。</p>
+          <div class="fm-intro-tags" style="margin-top:18px">
+            <span class="fm-chip">原创正版</span>
+            <span class="fm-chip">编辑陪跑</span>
+            <span class="fm-chip">影像改编</span>
+            <span class="fm-chip">稿酬透明</span>
+          </div>
+        </div>
+        <form class="fm-join-form" id="fmJoinForm">
+          <label for="fmFormName">作者昵称</label>
+          <input id="fmFormName" type="text" placeholder="例如：江上白" required>
+          <label for="fmFormType">投稿方向</label>
+          <select id="fmFormType">
+            <option>东方神话 · 长篇</option>
+            <option>仙侠修真 · 长篇</option>
+            <option>悬疑异闻 · 中短篇</option>
+            <option>都市幻想 · 中短篇</option>
+            <option>影像 / 插画合作</option>
+          </select>
+          <button class="fm-btn fm-btn-primary" type="submit">提交报名意向</button>
+          <div class="fm-form-tip" id="fmFormTip" role="status" aria-live="polite"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- 读者评价 -->
+  <section class="fm-section fm-section-alt" id="reviews" aria-labelledby="fmReviewsTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Community Voice</span>
+        <h2 id="fmReviewsTitle">来自社区的真实评价</h2>
+        <p>每一条都来自真实读者与作者，我们只做了排版整理。</p>
+      </div>
+      <div class="fm-reviews">
+        <article class="fm-review">
+          <p>《雾隐山海志》第三卷开头的静默章节我读了三遍。很少见到有作者敢这么写，也很少见到编辑敢这么留。</p>
+          <div class="fm-review-foot"><span class="fm-avatar" style="background:linear-gradient(135deg,#9fe3de,#2f7f86)">木</span><b>木叶声</b><span>读者 · 关注 2 年</span></div>
+        </article>
+        <article class="fm-review">
+          <p>投稿后第五天收到反馈，逐段标了问题，甚至给了我两个可选的修改方向。这种认真程度在同类平台里真的少见。</p>
+          <div class="fm-review-foot"><span class="fm-avatar" style="background:linear-gradient(135deg,#ffd98a,#c2623f)">阿</span><b>阿渡</b><span>新晋作者</span></div>
+        </article>
+        <article class="fm-review">
+          <p>喜欢这里的影像短片，节奏不快，但看完会想再翻回原文看那一段。文本和影像互相加分，这是很难做到的。</p>
+          <div class="fm-review-foot"><span class="fm-avatar" style="background:linear-gradient(135deg,#c9a0f0,#5b3a8f)">周</span><b>周末看书</b><span>读者</span></div>
+        </article>
+        <article class="fm-review">
+          <p>作为一个做了六年插画的人，我很感谢砚青那期访谈。她讲怎么给妖怪写小传的方法，直接救了我一个卡了两个月的项目。</p>
+          <div class="fm-review-foot"><span class="fm-avatar" style="background:linear-gradient(135deg,#e8638c,#8e3f8f)">灰</span><b>灰阶</b><span>插画师</span></div>
+        </article>
+        <article class="fm-review">
+          <p>榜单更新很规律，口碑榜尤其有用。我基本靠它找书，比算法推荐靠谱，因为能看到具体评分维度。</p>
+          <div class="fm-review-foot"><span class="fm-avatar" style="background:linear-gradient(135deg,#9fe3de,#7a4fb0)">拾</span><b>拾荒者</b><span>读者 · 关注 3 年</span></div>
+        </article>
+        <article class="fm-review">
+          <p>线下读稿会去过一次，坐了四个小时。不夸张地说，那是我今年最有收获的一个下午，比很多付费课程值。</p>
+          <div class="fm-review-foot"><span class="fm-avatar" style="background:linear-gradient(135deg,#f0b47a,#a8592f)">南</span><b>南山南</b><span>作者 · 在读</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 品牌动态 -->
+  <section class="fm-section" id="news" aria-labelledby="fmNewsTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Brand Updates</span>
+        <h2 id="fmNewsTitle">企业动态与内容更新</h2>
+        <p>来自官方发布的版本迭代、活动与内容公告。</p>
+      </div>
+      <div class="fm-news">
+        <div class="fm-news-item">
+          <span class="fm-news-date">2026 / 11 / 17</span>
+          <div>
+            <h3>幻境设定百科 v2.0 上线：支持按山川、神职、器物三维检索</h3>
+            <p>首批收录 216 条设定，全部由签约作者与编辑部共同校订，支持跳转至原作出处章节。</p>
+          </div>
+          <span class="fm-news-tag">产品更新</span>
+        </div>
+        <div class="fm-news-item">
+          <span class="fm-news-date">2026 / 11 / 12</span>
+          <div>
+            <h3>冬季「幻境短篇创作赛」开启报名，主题为“借来的一夜”</h3>
+            <p>征稿截止 12 月 20 日，设五个奖项，获奖作品将进入短影像扶持计划的优先评估名单。</p>
+          </div>
+          <span class="fm-news-tag">比赛报名</span>
+        </div>
+        <div class="fm-news-item">
+          <span class="fm-news-date">2026 / 11 / 05</span>
+          <div>
+            <h3>短影像扶持计划第三期公布入选名单，共 30 组创作者</h3>
+            <p>本期覆盖东方神话、悬疑与都市幻想三个方向，制作周期为四个月，成果将于明年春季集中展映。</p>
+          </div>
+          <span class="fm-news-tag">官方发布</span>
+        </div>
+        <div class="fm-news-item">
+          <span class="fm-news-date">2026 / 10 / 28</span>
+          <div>
+            <h3>创作者访谈第 18 期上线：谈谈世界观构建的方法</h3>
+            <p>本期嘉宾为《夜航九歌》作者江上白，访谈中分享了从短篇到系列的叙事迁移经验。</p>
+          </div>
+          <span class="fm-news-tag">精品内容</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="fm-section fm-section-alt" id="faq" aria-labelledby="fmFaqTitle">
+    <div class="fm-wrap">
+      <div class="fm-sec-head">
+        <span class="fm-kicker">Help Center</span>
+        <h2 id="fmFaqTitle">帮助中心：关于阅读、投稿与版权的常见问题</h2>
+      </div>
+      <div class="fm-faq">
+        <details open>
+          <summary>飞魔幻小说大全提供哪些形式的作品？</summary>
+          <p>目前包括长篇连载、短篇与微小说、世界设定集、作者访谈、创作幕后与改编短片。长篇按卷更新，短篇按主题合集整理，设定集可按关键词检索。所有内容均标注更新状态与完结情况，方便读者按自己的节奏进入。</p>
+        </details>
+        <details>
+          <summary>投稿需要满足什么条件？</summary>
+          <p>作品需为本人原创，未在其他平台签署独家授权。题材不限，但要求世界观自洽、语言完整。长篇可先提交前三章与整体大纲；短篇建议一次提交完整稿件。投稿通过后会进入编辑评估，通常在七个工作日内反馈。</p>
+        </details>
+        <details>
+          <summary>平台的版权与授权方式是怎样的？</summary>
+          <p>作者保留作品著作权，平台依据签约类型获得相应的信息网络传播权与影像改编优先权。所有授权范围、期限与分成比例在合同中明确列出，不做模糊表述。我们坚持原创正版，对抄袭与洗稿零容忍。</p>
+        </details>
+        <details>
+          <summary>短影像扶持计划如何申请？</summary>
+          <p>该计划每季度开放一次报名，面向有改编意愿的作者与影像创作者。提交材料包括作品片段、改编思路与制作预算说明。入选团队会获得制作基金、器材支持与发行渠道协助。第三期报名已于 11 月截止，第四期预计在明年三月开放。</p>
+        </details>
+        <details>
+          <summary>我可以在平台内下载作品吗？</summary>
+          <p>部分公开作品支持下载为纯文本，用于个人离线阅读，下载内容包含版权声明。为保护作者权益，下载文件不可用于二次传播或商业用途。影像类内容暂不提供下载。</p>
+        </details>
+        <details>
+          <summary>如何参与线下读稿会？</summary>
+          <p>读稿会每月举办一次，地点在合作书店与编辑部会议室，同时在线上同步。报名入口在活动公告中开放，名额有限。参与者需提前提交一份不超过五千字的稿件节选，编辑会在现场逐页回应。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="fm-footer">
+  <div class="fm-wrap">
+    <div class="fm-footer-grid">
+      <div class="fm-footer-brand">
+        <div class="fm-logo">
+          <span class="fm-logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none"><path d="M12 2.5l2.3 6.2 6.2 2.3-6.2 2.3L12 19.5l-2.3-6.2L3.5 11l6.2-2.3z" fill="#e9b949"/><circle cx="18.5" cy="5" r="1.6" fill="#a678e8"/></svg>
+          </span>
+          <span class="fm-logo-txt"><strong>飞魔幻小说大全</strong><span>FMH FANTASY</span></span>
+        </div>
+        <p>飞魔幻小说大全官方网站，专注奇幻、仙侠、悬疑与东方神话题材的原创文学影像社区。我们以匠心连接创作者与读者，让每一个世界观都被认真对待。</p>
+      </div>
+      <div>
+        <h3>内容导航</h3>
+        <ul>
+          <li><a href="#focus">焦点内容</a></li>
+          <li><a href="#stream">幻境影像</a></li>
+          <li><a href="#topics">专题企划</a></li>
+          <li><a href="#rank">本周榜单</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>关于我们</h3>
+        <ul>
+          <li><a href="#about">品牌故事</a></li>
+          <li><a href="#creators">创作者矩阵</a></li>
+          <li><a href="#news">企业动态</a></li>
+          <li><a href="#faq">帮助中心</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>联系与合作</h3>
+        <p>商务合作：bd@fmh-fantasy.example<br>投稿咨询：editor@fmh-fantasy.example<br>工作时间：周一至周五 10:00–19:00</p>
+        <div class="fm-intro-tags" style="margin-top:12px">
+          <span class="fm-chip">原创正版</span>
+          <span class="fm-chip">值得信赖</span>
+        </div>
+      </div>
+    </div>
+    <div class="fm-footer-bottom">
+      <span>© 2026 飞魔幻小说大全 · 版权所有 · 持续运营中</span>
+      <span>官网内容均为原创或已获授权 · 内容生态与品牌由企业团队维护</span>
+    </div>
+  </div>
+</footer>
+
+<!-- 悬浮按钮与浮层 -->
+<button class="fm-top" id="fmTopBtn" aria-label="回到顶部">↑</button>
+
+<div class="fm-toast" id="fmToast" role="status" aria-live="polite"></div>
+
+<div class="fm-modal" id="fmModal" role="dialog" aria-modal="true" aria-labelledby="fmModalTitle">
+  <div class="fm-modal-box">
+    <h3 id="fmModalTitle">留下你的想法</h3>
+    <p>你的评论会显示在对应内容下方，我们会认真阅读每一条反馈。</p>
+    <textarea id="fmModalText" placeholder="写点什么吧，例如：这一卷的守山人写得很克制……"></textarea>
+    <div class="fm-modal-ops">
+      <button class="fm-btn fm-btn-ghost fm-btn-mini" data-close-modal>取消</button>
+      <button class="fm-btn fm-btn-primary fm-btn-mini" id="fmModalSend">提交评论</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* Toast */
+  var toastEl = document.getElementById('fmToast');
+  var toastTimer = null;
+  function showToast(msg){
+    toastEl.textContent = msg;
+    toastEl.classList.add('is-on');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toastEl.classList.remove('is-on'); }, 2200);
+  }
+
+  /* 移动端导航 */
+  var navToggle = document.getElementById('fmNavToggle');
+  var nav = document.getElementById('fmNav');
+  navToggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A'){ nav.classList.remove('is-open'); navToggle.setAttribute('aria-expanded','false'); }
+  });
+
+  /* 搜索反馈 */
+  var searchInput = document.getElementById('fmSearchInput');
+  var searchBtn = document.getElementById('fmSearchBtn');
+  var searchHint = document.getElementById('fmSearchHint');
+  var suggestList = ['雾隐山海志','夜航九歌','旧城灯影','纸上妖魔录','山海绘卷配色考','守灯人','世界观搭建指南','长夜书院读稿会'];
+  function doSearch(){
+    var kw = searchInput.value.trim();
+    if(!kw){
+      searchHint.innerHTML = '<b>输入书名、题材或作者</b><ul><li>试试：东方神话</li><li>试试：沉舟客</li></ul>';
+      searchHint.classList.add('is-on');
+      return;
+    }
+    var hits = suggestList.filter(function(s){ return s.indexOf(kw) > -1; });
+    if(!kw){ return; }
+    if(hits.length === 0 && kw.length > 1){ hits = suggestList.filter(function(){ return true; }).slice(0,3); }
+    var html = '<b>“' + kw.replace(/[<>&]/g,'') + '” 的相关结果：</b><ul>';
+    (hits.length ? hits : suggestList.slice(0,3)).forEach(function(s){
+      html += '<li data-kw="' + s + '">' + s + '</li>';
+    });
+    html += '</ul>';
+    searchHint.innerHTML = html;
+    searchHint.classList.add('is-on');
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){ if(e.key === 'Enter'){ e.preventDefault(); doSearch(); } });
+  searchInput.addEventListener('focus', function(){ if(searchInput.value) doSearch(); });
+  searchHint.addEventListener('click', function(e){
+    var li = e.target.closest('li');
+    if(li){
+      searchInput.value = li.getAttribute('data-kw');
+      searchHint.classList.remove('is-on');
+      showToast('正在为你定位“' + li.getAttribute('data-kw') + '”相关内容');
+      document.getElementById('stream').scrollIntoView({behavior:'smooth'});
+    }
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.fm-search')) searchHint.classList.remove('is-on');
+  });
+
+  /* 点赞 / 收藏 */
+  document.addEventListener('click', function(e){
+    var likeBtn = e.target.closest('[data-like]');
+    if(likeBtn){
+      e.preventDefault();
+      var numEl = likeBtn.querySelector('.fm-like-num');
+      var n = parseInt(numEl.textContent, 10) || 0;
+      var liked = likeBtn.classList.toggle('is-liked');
+      var ico = likeBtn.querySelector('.fm-ico');
+      if(liked){ n += 1; ico.textContent = '♥'; showToast('已标记喜欢，感谢你的支持'); }
+      else { n = Math.max(0, n - 1); ico.textContent = '♡'; showToast('已取消喜欢'); }
+      numEl.textContent = n;
+      return;
+    }
+    var saveBtn = e.target.closest('[data-save]');
+    if(saveBtn){
+      e.preventDefault();
+      var saved = saveBtn.classList.toggle('is-saved');
+      var sIco = saveBtn.querySelector('.fm-ico');
+      if(sIco) sIco.textContent = saved ? '★' : '☆';
+      showToast(saved ? '已加入收藏夹' : '已从收藏夹移除');
+      return;
+    }
+    var shareBtn = e.target.closest('[data-share]');
+    if(shareBtn){
+      e.preventDefault();
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(window.location.href).then(function(){
+          showToast('链接已复制，可分享给同好');
+        }).catch(function(){ showToast('可分享至微信 / 微博 / QQ：点击浏览器分享按钮'); });
+      } else {
+        showToast('可分享至微信 / 微博 / QQ：点击浏览器分享按钮');
+      }
+      return;
+    }
+  });
+
+  /* 标签筛选 */
+  var filterBtns = document.querySelectorAll('[data-filter]');
+  var streamCards = document.querySelectorAll('#fmStreamGrid .fm-vcard');
+  filterBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var cat = btn.getAttribute('data-filter');
+      filterBtns.forEach(function(b){ b.style.opacity = '0.55'; });
+      btn.style.opacity = '1';
+      var shown = 0;
+      streamCards.forEach(function(card){
+        var match = (cat === 'all') || (card.getAttribute('data-cat') === cat);
+        card.style.display = match ? '' : 'none';
+        if(match) shown++;
+      });
+      showToast(cat === 'all' ? '已显示全部 ' + shown + ' 条内容' : '已筛选出 ' + shown + ' 条相关内容');
+    });
+  });
+
+  /* 作者弹窗（用评论弹窗承载说明） */
+  var modal = document.getElementById('fmModal');
+  var modalTitle = document.getElementById('fmModalTitle');
+  var modalText = document.getElementById('fmModalText');
+  var pendingAuthor = '';
+  document.querySelectorAll('[data-author]').forEach(function(card){
+    card.addEventListener('click', function(){
+      var name = card.getAttribute('data-author');
+      pendingAuthor = name;
+      modalTitle.textContent = '给创作者「' + name + '」留言';
+      modalText.value = '';
+      modal.classList.add('is-open');
+      modalText.focus();
+    });
+    card.addEventListener('keydown', function(e){
+      if(e.key === 'Enter' || e.key === ' '){ e.preventDefault(); card.click(); }
+    });
+  });
+  document.getElementById('fmModalSend').addEventListener('click', function(){
+    var v = modalText.value.trim();
+    if(!v){ showToast('写点内容再提交吧'); return; }
+    modal.classList.remove('is-open');
+    showToast(pendingAuthor ? '留言已送达「' + pendingAuthor + '」，感谢反馈' : '评论已提交');
+    modalText.value = '';
+  });
+  document.querySelectorAll('[data-close-modal]').forEach(function(b){
+    b.addEventListener('click', function(){ modal.classList.remove('is-open'); });
+  });
+  modal.addEventListener('click', function(e){ if(e.target === modal) modal.classList.remove('is-open'); });
+  document.addEventListener('keydown', function(e){ if(e.key === 'Escape') modal.classList.remove('is-open'); });
+
+  /* 投稿表单 */
+  var joinForm = document.getElementById('fmJoinForm');
+  var joinTip = document.getElementById('fmFormTip');
+  joinForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    var name = document.getElementById('fmFormName').value.trim();
+    var type = document.getElementById('fmFormType').value;
+    if(!name){ joinTip.textContent = '请填写作者昵称后再提交。'; joinTip.style.color = '#e8638c'; return; }
+    joinTip.textContent = '报名信息已记录：' + name + ' · ' + type + '。编辑将在三个工作日内联系你。';
+    joinTip.style.color = '#5fd6d0';
+    showToast('报名意向已提交，感谢参与');
+    joinForm.reset();
+  });
+
+  /* 回到顶部 */
+  var topBtn = document.getElementById('fmTopBtn');
+  window.addEventListener('scroll', function(){
+    if(window.scrollY > 560) topBtn.classList.add('is-on');
+    else topBtn.classList.remove('is-on');
+  }, {passive:true});
+  topBtn.addEventListener('click', function(){ window.scrollTo({top:0, behavior:'smooth'}); });
+
+  /* 数字滚动 */
+  var counters = document.querySelectorAll('[data-count]');
+  var started = false;
+  function runCounters(){
+    if(started) return;
+    started = true;
+    counters.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'), 10) || 0;
+      var start = performance.now();
+      var dur = 1400;
+      function step(now){
+        var p = Math.min(1, (now - start) / dur);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.floor(target * eased);
+        el.textContent = val.toLocaleString('zh-CN');
+        if(p < 1) requestAnimationFrame(step);
+        else el.textContent = target.toLocaleString('zh-CN');
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if('IntersectionObserver' in window){
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ runCounters(); io.disconnect(); } });
+    }, {threshold:0.3});
+    var heroSection = document.querySelector('.fm-hero-stats');
+    if(heroSection) io.observe(heroSection);
+  } else {
+    runCounters();
+  }
+})();
+</script>
+</body>
+  </html>
